@@ -3,10 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Parvathy Mohan | Senior Data Analyst</title>
- 
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+--ivory:#F5F1E8;
+--white:#FFFFFF;
+--gold:#B08D57;
+--dark:#1F2937;
+--text:#4B5563;
+--light:#EAE4D8;
+}
 
 *{
 margin:0;
@@ -14,62 +25,117 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
-font-family:'Segoe UI',sans-serif;
-background:#0b1120;
-color:white;
-line-height:1.6;
+html{
+scroll-behavior:smooth;
 }
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--ivory);
+color:var(--dark);
+line-height:1.8;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:90px 0;
+}
+
+h1,h2,h3{
+font-weight:700;
+}
+
+.section-title{
+font-size:2.5rem;
+text-align:center;
+margin-bottom:20px;
+color:var(--dark);
+}
+
+.section-subtitle{
+text-align:center;
+max-width:700px;
+margin:auto;
+margin-bottom:50px;
+color:var(--text);
+}
+
+/* HERO */
 
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
-justify-content:center;
-padding:50px 20px;
-background:linear-gradient(135deg,#0f172a,#1e3a8a);
+background:
+linear-gradient(
+rgba(245,241,232,0.92),
+rgba(245,241,232,0.92)
+),
+url('background.jpg');
+background-size:cover;
+background-position:center;
 }
 
 .hero-container{
-max-width:1200px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:50px;
+gap:60px;
 flex-wrap:wrap;
 }
 
-.profile-img{
-width:280px;
-height:280px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid #60a5fa;
-box-shadow:0 0 30px rgba(96,165,250,.5);
+.profile-section{
+flex:1;
+display:flex;
+justify-content:center;
 }
 
-.hero-text{
-flex:1;
+.profile-img{
+width:320px;
+height:320px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid var(--gold);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.hero-content{
+flex:2;
 min-width:300px;
 }
 
 .hero h1{
-font-size:3.5rem;
+font-size:4rem;
 margin-bottom:10px;
 }
 
 .hero h2{
-color:#93c5fd;
+color:var(--gold);
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.hero-tagline{
+font-size:1rem;
+font-weight:600;
+letter-spacing:1px;
 margin-bottom:20px;
+color:var(--dark);
 }
 
 .hero p{
-font-size:1.1rem;
+font-size:1.05rem;
+color:var(--text);
 max-width:700px;
 }
 
-.buttons{
-margin-top:30px;
+.btn-group{
+margin-top:35px;
 display:flex;
 gap:15px;
 flex-wrap:wrap;
@@ -77,50 +143,81 @@ flex-wrap:wrap;
 
 .btn{
 padding:14px 28px;
-border-radius:30px;
+border-radius:40px;
 text-decoration:none;
-font-weight:bold;
-transition:.3s;
+font-weight:600;
+transition:0.3s;
+display:inline-block;
 }
 
 .btn-primary{
-background:#2563eb;
+background:var(--gold);
 color:white;
 }
 
 .btn-secondary{
+border:2px solid var(--gold);
 background:white;
-color:#1e3a8a;
+color:var(--gold);
 }
 
 .btn:hover{
 transform:translateY(-3px);
 }
 
-section{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
+/* STATS */
+
+.stats{
+background:white;
 }
 
-.section-title{
-font-size:2rem;
-margin-bottom:30px;
-color:#93c5fd;
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+text-align:center;
 }
+
+.stat-card{
+padding:25px;
+}
+
+.stat-card h3{
+font-size:2.5rem;
+color:var(--gold);
+}
+
+.stat-card p{
+color:var(--text);
+}
+
+/* ABOUT */
+
+.about-card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* SKILLS */
 
 .skills{
 display:flex;
 flex-wrap:wrap;
 gap:15px;
+justify-content:center;
 }
 
 .skill{
-background:#1e293b;
-padding:12px 18px;
-border-radius:25px;
-border:1px solid #334155;
+background:white;
+padding:12px 20px;
+border-radius:30px;
+border:1px solid var(--light);
+font-weight:500;
 }
+
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -128,44 +225,93 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
-.card{
-background:#111827;
-padding:25px;
-border-radius:15px;
-border:1px solid #1f2937;
-transition:.3s;
+.project-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+transition:0.3s;
 }
 
-.card:hover{
+.project-card:hover{
 transform:translateY(-5px);
-border-color:#60a5fa;
 }
 
-.icon{
-font-size:40px;
-margin-bottom:15px;
+.project-image{
+height:220px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:60px;
+background:#F8F5EF;
+color:var(--gold);
 }
 
-.card h3{
+.project-content{
+padding:25px;
+}
+
+.project-content h3{
 margin-bottom:10px;
-color:#93c5fd;
 }
 
-.contact{
-text-align:center;
+.project-content p{
+color:var(--text);
 }
+
+/* EXPERIENCE */
+
+.experience-card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.experience-card ul{
+padding-left:20px;
+margin-top:20px;
+}
+
+.experience-card li{
+margin-bottom:12px;
+}
+
+/* CONTACT */
+
+.contact-card{
+background:white;
+padding:50px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.contact-card p{
+margin:12px 0;
+}
+
+.contact-card a{
+color:var(--gold);
+text-decoration:none;
+font-weight:600;
+}
+
+/* FOOTER */
 
 footer{
-background:#020617;
-padding:25px;
+background:#ECE6DB;
 text-align:center;
-color:#94a3b8;
+padding:25px;
+color:var(--text);
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
 .hero{
-padding-top:80px;
+padding:100px 0 60px;
 }
 
 .hero-container{
@@ -174,13 +320,26 @@ text-align:center;
 }
 
 .hero h1{
-font-size:2.5rem;
+font-size:2.8rem;
+}
+
+.hero h2{
+font-size:1.5rem;
 }
 
 .profile-img{
-width:220px;
-height:220px;
+width:240px;
+height:240px;
 }
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.section-title{
+font-size:2rem;
+}
+
 }
 
 </style>
@@ -190,25 +349,31 @@ height:220px;
 
 <section class="hero">
 
-<div class="hero-container">
+<div class="container hero-container">
 
+<div class="profile-section">
 <img src="Profile.png" alt="Parvathy Mohan" class="profile-img">
+</div>
 
-<div class="hero-text">
+<div class="hero-content">
 
 <h1>Parvathy Mohan</h1>
 
 <h2>Senior Data Analyst</h2>
 
+<div class="hero-tagline">
+BUSINESS INTELLIGENCE • POWER BI • SQL • KPI REPORTING
+</div>
+
 <p>
-Data Analyst with 8 years of experience delivering business intelligence,
-Power BI dashboards, KPI reporting, data visualization and strategic insights
-for UAE and international projects.
+Transforming complex business data into actionable insights through Business Intelligence,
+Power BI, SQL, and advanced analytics. Bringing 8 years of experience supporting strategic
+decision-making, performance measurement, and executive reporting across UAE and international projects.
 </p>
 
-<div class="buttons">
+<div class="btn-group">
 
-<a href="Parvathy_Mohan_Resume.pdf" class="btn btn-primary" target="_blank">
+<a href="Parvathy_Mohan_Resume.pdf" target="_blank" class="btn btn-primary">
 📄 Download Resume
 </a>
 
@@ -224,34 +389,87 @@ for UAE and international projects.
 
 </section>
 
-<section>
+<section class="stats">
 
-<h2 class="section-title">About Me</h2>
+<div class="container">
 
-<p>
-Experienced Senior Data Analyst specializing in Power BI, SQL, Excel,
-Power Query, DAX, KPI development, stakeholder reporting,
-survey analytics and business intelligence reporting.
-</p>
+<div class="stats-grid">
+
+<div class="stat-card">
+<h3>8+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-card">
+<h3>20+</h3>
+<p>Analytics Projects</p>
+</div>
+
+<div class="stat-card">
+<h3>10+</h3>
+<p>Interactive Dashboards</p>
+</div>
+
+<div class="stat-card">
+<h3>UAE</h3>
+<p>International Projects</p>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <section>
 
-<h2 class="section-title">Technical Skills</h2>
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about-card">
+
+<p>
+I am a Senior Data Analyst with 8 years of experience delivering business intelligence
+solutions, KPI reporting, executive dashboards, and performance analytics. My expertise
+spans Power BI, SQL, Excel, Power Query, and DAX, helping organizations transform
+complex datasets into meaningful business insights.
+
+I have contributed to analytics initiatives across exhibitions, events, research projects,
+marketing performance analysis, and executive reporting, enabling stakeholders to make
+confident data-driven decisions.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Core Competencies</h2>
 
 <div class="skills">
 
 <div class="skill">Power BI</div>
 <div class="skill">SQL</div>
-<div class="skill">Excel</div>
-<div class="skill">DAX</div>
+<div class="skill">Advanced Excel</div>
 <div class="skill">Power Query</div>
-<div class="skill">Data Visualization</div>
+<div class="skill">DAX</div>
 <div class="skill">Business Intelligence</div>
+<div class="skill">Data Visualization</div>
 <div class="skill">Dashboard Development</div>
-<div class="skill">KPI Reporting</div>
 <div class="skill">Data Modelling</div>
+<div class="skill">KPI Development</div>
+<div class="skill">Performance Analytics</div>
+<div class="skill">Executive Reporting</div>
+<div class="skill">Data Storytelling</div>
+<div class="skill">Stakeholder Management</div>
+
+</div>
 
 </div>
 
@@ -259,51 +477,151 @@ survey analytics and business intelligence reporting.
 
 <section>
 
+<div class="container">
+
 <h2 class="section-title">Featured Projects</h2>
 
 <div class="projects">
 
-<div class="card">
-<div class="icon">📊</div>
+<div class="project-card">
+
+<div class="project-image">📊</div>
+
+<div class="project-content">
+
 <h3>Event & Exhibition Analytics</h3>
+
 <p>
-Analytics dashboards for major Middle East exhibitions and trade events.
+Delivered analytics and business intelligence support for major Middle East exhibitions,
+including Ru'ya Careers UAE, Dubai International Horse Fair, Saudi Food Show,
+and Gulfood Manufacturing.
 </p>
+
 </div>
 
-<div class="card">
-<div class="icon">📈</div>
+</div>
+
+<div class="project-card">
+
+<div class="project-image">📈</div>
+
+<div class="project-content">
+
 <h3>Food Security Index Research</h3>
+
 <p>
-Database architecture and analytics framework supporting strategic research.
+Designed and developed the database architecture and analytics framework
+for research initiatives, supporting strategic reporting and visualization.
 </p>
+
 </div>
 
-<div class="card">
-<div class="icon">💰</div>
+</div>
+
+<div class="project-card">
+
+<div class="project-image">💰</div>
+
+<div class="project-content">
+
 <h3>Sales Analytics Dashboard</h3>
+
 <p>
-Revenue tracking, KPI monitoring and executive reporting dashboards.
+Built executive dashboards to monitor revenue, profitability,
+sales performance, KPI achievement, and business growth.
 </p>
+
 </div>
 
-<div class="card">
-<div class="icon">📣</div>
-<h3>Marketing Analytics</h3>
+</div>
+
+<div class="project-card">
+
+<div class="project-image">📣</div>
+
+<div class="project-content">
+
+<h3>Marketing Performance Analytics</h3>
+
 <p>
-Campaign performance, conversion analysis and ROI measurement.
+Developed reporting solutions to evaluate campaign performance,
+customer engagement, lead generation, and return on investment.
 </p>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section class="contact">
+<section>
 
-<h2 class="section-title">Contact</h2>
+<div class="container">
+
+<h2 class="section-title">Professional Experience</h2>
+
+<div class="experience-card">
+
+<p>
+Throughout my career, I have partnered with business leaders, research teams,
+and operational stakeholders to design reporting solutions, automate data processes,
+and deliver business intelligence that drives measurable outcomes.
+</p>
+
+<ul>
+
+<li>Developed interactive Power BI dashboards using DAX and Power Query.</li>
+
+<li>Analyzed large datasets to generate actionable business insights.</li>
+
+<li>Designed KPI reporting frameworks and executive dashboards.</li>
+
+<li>Conducted trend analysis, benchmarking, and performance evaluations.</li>
+
+<li>Delivered executive reporting and data storytelling presentations.</li>
+
+<li>Maintained data quality, governance, and validation processes.</li>
+
+<li>Collaborated with cross-functional stakeholders to support strategic decision-making.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Let's Connect</h2>
+
+<div class="contact-card">
+
+<p>📍 Kerala, India</p>
 
 <p>📧 parvathymohan131@gmail.com</p>
+
+<p>
+💼
+<a href="https://www.linkedin.com/in/parvathymohan/" target="_blank">
+View LinkedIn Profile
+</a>
+</p>
+
+<p>
+📄 Resume available through the download button above.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
