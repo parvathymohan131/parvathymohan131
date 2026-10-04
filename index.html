@@ -6,177 +6,196 @@
 <title>Parvathy Mohan | Senior Data Analyst</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
 body{
-    background:#f5f7fa;
+    margin:0;
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#f4f7fb;
     color:#333;
-    line-height:1.6;
 }
 
-header{
-    background:#0f172a;
+.hero{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
     color:white;
     text-align:center;
-    padding:80px 20px;
+    padding:100px 20px;
 }
 
-header h1{
+.hero h1{
     font-size:3rem;
+    margin-bottom:10px;
 }
 
-header p{
-    margin-top:15px;
+.hero p{
     font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 24px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-}
-
-section{
+.container{
+    width:90%;
     max-width:1100px;
     margin:auto;
-    padding:60px 20px;
+    padding:50px 0;
 }
 
 h2{
-    margin-bottom:20px;
     color:#0f172a;
+    margin-bottom:20px;
 }
 
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
 }
 
 .skill{
     background:#dbeafe;
+    color:#1e3a8a;
     padding:10px 15px;
-    border-radius:20px;
+    border-radius:25px;
+    font-weight:600;
 }
 
 .projects{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
 }
 
 .card{
     background:white;
     padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
 }
 
 footer{
     background:#0f172a;
     color:white;
     text-align:center;
-    padding:25px;
+    padding:20px;
+    margin-top:40px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:20px;
+    background:white;
+    color:#1e3a8a;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Parvathy Mohan</h1>
-<p>Senior Data Analyst | Power BI | SQL | Excel | Business Intelligence</p>
-<a href="#" class="btn">Download Resume</a>
-</header>
+<section class="hero">
+    <h1>Parvathy Mohan</h1>
+    <h3>Senior Data Analyst</h3>
 
-<section>
-<h2>About Me</h2>
+    <p>
+        Data Analyst with 8 years of experience delivering business intelligence,
+        dashboard development, KPI reporting, data visualization and strategic insights.
+    </p>
 
-<p>
-Data Analyst with 8 years of experience delivering business intelligence,
-dashboard development, KPI reporting, and data-driven insights for UAE and international projects.
-Experienced in Power BI, SQL, Excel, data visualization, stakeholder reporting,
-survey analytics, and business performance analysis.
-</p>
+    <a href="#" class="button">Download Resume</a>
 </section>
 
-<section>
-<h2>Technical Skills</h2>
+<div class="container">
 
-<div class="skills">
-<div class="skill">Power BI</div>
-<div class="skill">SQL</div>
-<div class="skill">Excel</div>
-<div class="skill">Power Query</div>
-<div class="skill">DAX</div>
-<div class="skill">Data Visualization</div>
-<div class="skill">Dashboard Development</div>
-<div class="skill">Business Intelligence</div>
-<div class="skill">KPI Reporting</div>
-<div class="skill">Data Modelling</div>
-</div>
-</section>
+    <h2>About Me</h2>
 
-<section>
-<h2>Featured Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3>Event & Exhibition Analytics Dashboard</h3>
-<p>
-Developed analytical dashboards for major Middle East exhibitions,
-providing insights into attendee engagement, participation trends,
-stakeholder feedback, and event performance.
-</p>
-</div>
-
-<div class="card">
-<h3>Food Security Index Research</h3>
-<p>
-Designed database architecture and visualization framework for
-research analytics, supporting data-driven policy and strategic decisions.
-</p>
-</div>
-
-<div class="card">
-<h3>Sales Analytics Dashboard</h3>
-<p>
-Created executive dashboards to monitor revenue,
-sales trends, profitability, and KPI performance.
-</p>
-</div>
-
-<div class="card">
-<h3>Marketing Analytics Dashboard</h3>
-<p>
-Analyzed campaign performance, conversion rates,
-customer engagement, and ROI metrics.
-</p>
-</div>
+    <p>
+        Experienced Data Analyst specializing in Power BI, SQL, Excel,
+        KPI reporting, stakeholder reporting, survey analytics,
+        business intelligence and executive dashboard development.
+        Worked on UAE-focused projects across events, exhibitions,
+        research and performance analytics.
+    </p>
 
 </div>
-</section>
 
-<section>
-<h2>Contact</h2>
+<div class="container">
 
-<p><strong>Name:</strong> Parvathy Mohan</p>
-<p><strong>Role:</strong> Senior Data Analyst</p>
+    <h2>Technical Skills</h2>
 
-</section>
+    <div class="skills">
+        <div class="skill">Power BI</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Excel</div>
+        <div class="skill">Power Query</div>
+        <div class="skill">DAX</div>
+        <div class="skill">Data Visualization</div>
+        <div class="skill">Dashboard Development</div>
+        <div class="skill">Business Intelligence</div>
+        <div class="skill">Data Modelling</div>
+        <div class="skill">KPI Reporting</div>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h2>Featured Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>Event & Exhibition Analytics</h3>
+            <p>
+                Developed analytics dashboards for major Middle East exhibitions,
+                tracking participation, engagement, satisfaction and performance metrics.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Food Security Index Research</h3>
+            <p>
+                Designed database architecture and analytics framework
+                supporting strategic research initiatives.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sales Analytics Dashboard</h3>
+            <p>
+                Built executive dashboards for revenue monitoring,
+                KPI tracking and business performance analysis.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Marketing Analytics</h3>
+            <p>
+                Measured campaign performance, customer engagement
+                and ROI using interactive dashboards.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h2>Contact</h2>
+
+    <p><strong>Name:</strong> Parvathy Mohan</p>
+    <p><strong>Role:</strong> Senior Data Analyst</p>
+
+</div>
 
 <footer>
-<p>© 2026 Parvathy Mohan | Senior Data Analyst</p>
+    © 2026 Parvathy Mohan | Senior Data Analyst
 </footer>
 
 </body>
